@@ -10,3 +10,4 @@ country
 INNER JOIN city ON (city.countrycode = country.code)
 WHERE country.name = 'San Marino' 
 AND city.name != country.name
+

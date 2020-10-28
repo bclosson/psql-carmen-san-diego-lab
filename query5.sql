@@ -2,8 +2,15 @@
 -- parts of the globe! She's headed to South America as we speak; go find a city whose name is like the one we were
 -- headed to, but doesn't end the same. Find out the city, and do another search for what country it's in. Hurry!
 
+-- SELECT
+-- *
+-- FROM
+-- city
+-- WHERE name LIKE 'Serra%';
+
 SELECT
-city.name
-FROM
-region city
-WHERE city.name LIKE 'San%';
+country.name
+FROM 
+country
+INNER JOIN city ON (city.countrycode = country.code)
+WHERE city.name LIKE 'Serra%';
